@@ -69,22 +69,11 @@
 	</tr>
 	<tr class="fechas2">
 		<td colspan="2" class="dias">
-			<select name="dia">
-				<option value="01">01</option>
-				<option value="02">02</option>
-				<option value="03">03</option>
-				<option value="04">04</option>
-				<option value="05">31</option>
+			<select name="dia" id="dia">
 			</select>
-			<select name="mes">
-				<option value="Enero">Enero</option>
-				<option value="...">...</option>
-				<option value="Diciembre">Diciembre</option>
+			<select name="mes" id="mes">
 			</select>
-			<select name="year">
-				<option value="1980">1980</option>
-				<option value="...">...</option>
-				<option value="2019">2019</option>
+			<select name="year" id="year">
 			</select>
 		</td>
 	</tr>
@@ -94,14 +83,26 @@
 		</td>
 	</tr>
 </table>
-	<!--<h1>Formulario</h1>
-	<label></label>
-	<input type="text" name="Nombre" placeholder="Nombre">
-	<input type="text" name="Apeliidos" placeholder="Apellidos">
-	<label>Sexo</label>
-	<input type="radio" name="sexo" value="m">
-	<input type="radio" name="sexo" value="f">
-	-->
+
+	<script type="text/javascript">
+		let dia=document.querySelector("#dia");
+		let meses=document.querySelector("#mes");
+		let year=document.querySelector("#year");
+
+		let mes=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+		for (let i=1;i<=31;i++)
+		{
+			dia.innerHTML+="<option>"+i+"</option>";
+		}
+		for (m of mes)
+		{
+			meses.innerHTML+="<option>"+m+"</option>";
+		}
+		for (let i = 2019; i >= 1940; i--) {
+			year.innerHTML+="<option>"+i+"</option>";
+		}
+	</script>
 </form>
 </div>
 </body>
