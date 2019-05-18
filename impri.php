@@ -1,35 +1,34 @@
 <?php 
-	date_default_timezone_set("America/lima");
-	extract($_GET);
-	echo $Nombres;
-	echo "<br />";
-	echo $Apellidos;
-	echo "<br />";
-	if ($sexo=="f") {
-		echo "Femenino";
-	}
-	else{
-		echo "Masculino";
-	}
-	echo "<br/>";
-	$meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-	foreach ($meses as $key => $value) {
-		echo $value;
-		//echo "<option value=\"$value\">",$value,"</option>";
-	}
-	for ($i=1920; $i<=2010  ; $i+=10) { 
-		echo $i;
-		echo "<br/>";
-	}
-	/*
-	<script>
-
-	let dia=document.querySelector("#dia");
-	for (let i=1;i<=31;i++)
+	if ($_SERVER["REQUEST_METHOD"]=="POST") {
+	extract($_POST);
+	if(empty($Nombres) or empty($Apellidos) or empty($sexo) or empty($dia) or empty($mes) or empty($year))
 	{
-		dia.innerHTML="<option>"+i+"</option>";
+		header("location:index.php?error=Debe llenar Todos los campos");
 	}
-	*/
-	echo "<br />";
-	echo "<br />";
+	else
+	{
+echo <<<HTML
+	<h1>Nuevo Registro de Usuario</h1>
+	<hr/>
+	<table>
+		<tr>
+			<td><strong>Nombres: </strong></td>
+			<td>$Nombres</td>
+		</tr>
+		<tr>
+			<td><strong>Apellidos: </strong></td>
+			<td>$Apellidos</td>
+		</tr>
+		<tr>
+			<td><strong>Sexo: </strong></td>
+			<td>$sexo</td>
+		</tr>
+		<tr>
+			<td><strong>Fecha de Nacimiento: </strong>
+			<td>$dia de $mes del $year</td>
+		</tr>
+	</table>
+HTML;
+		}
+	}
  ?>

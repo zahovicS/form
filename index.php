@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="formulario">
-<form action="impri.php">
+<form action="impri.php" method="post">
 
 <table border="0">
 	<tr>
@@ -62,10 +62,10 @@
 			<label>Fecha de Nacimiento</label>
 		</td>
 	</tr>
-	<tr>
+	<!--<tr>
 		<td colspan="2">
 			<input type="date" name="fechaNac" class="fechas">
-		</td>
+		</td>-->
 	</tr>
 	<tr class="fechas2">
 		<td colspan="2" class="dias">
@@ -109,21 +109,21 @@
 			if(m=="enero" || m=="marzo" || m=="mayo" || m=="julio" || m=="agosto" || m=="octubre" || m=="diciembre"){
 				dia.innerHTML="";
 				for (let i =1; i <= 31; i++) {
-					dia.innerHTML+="<option>"+i+"</option>";
+					dia.innerHTML+="<option value=\""+i+"\">"+i+"</option>";
 				}
 			}
 			else if(m=="febrero")
 			{
 					dia.innerHTML="";
 					for (let i = 1; i <= 28; i++) {
-						dia.innerHTML+="<option>"+i+"</option>";
+						dia.innerHTML+="<option>value=\""+i+"\""+i+"</option>";
 					}
 			}
 			else
 				{
 					dia.innerHTML="";
 					for (let i = 1; i <= 30; i++) {
-						dia.innerHTML+="<option>"+i+"</option>";
+						dia.innerHTML+="<option>value=\""+i+"\""+i+"</option>";
 					}
 				}
 		});
