@@ -102,6 +102,31 @@
 		for (let i = 2019; i >= 1940; i--) {
 			year.innerHTML+="<option>"+i+"</option>";
 		}
+
+		meses.addEventListener("change",()=>{
+			let m=meses.value.toLowerCase();
+
+			if(m=="enero" || m=="marzo" || m=="mayo" || m=="julio" || m=="agosto" || m=="octubre" || m=="diciembre"){
+				dia.innerHTML="";
+				for (let i =1; i <= 31; i++) {
+					dia.innerHTML+="<option>"+i+"</option>";
+				}
+			}
+			else if(m=="febrero")
+			{
+					dia.innerHTML="";
+					for (let i = 1; i <= 28; i++) {
+						dia.innerHTML+="<option>"+i+"</option>";
+					}
+			}
+			else
+				{
+					dia.innerHTML="";
+					for (let i = 1; i <= 30; i++) {
+						dia.innerHTML+="<option>"+i+"</option>";
+					}
+				}
+		});
 	</script>
 </form>
 </div>
