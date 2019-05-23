@@ -7,6 +7,12 @@
 	}
 	else
 	{
+		if($sexo=="m"){
+			$sexo="Masculino";
+		}
+		else{
+			$sexo="Femenino";
+		}
 echo <<<HTML
 	<h1>Nuevo Registro de Usuario</h1>
 	<hr/>

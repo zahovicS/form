@@ -116,18 +116,22 @@
 			{
 					dia.innerHTML="";
 					for (let i = 1; i <= 28; i++) {
-						dia.innerHTML+="<option>value=\""+i+"\""+i+"</option>";
+						dia.innerHTML+="<option value=\""+i+"\">"+i+"</option>";
 					}
 			}
 			else
 				{
 					dia.innerHTML="";
 					for (let i = 1; i <= 30; i++) {
-						dia.innerHTML+="<option>value=\""+i+"\""+i+"</option>";
+						dia.innerHTML+="<option value=\""+i+"\">"+i+"</option>";
 					}
 				}
 		});
 	</script>
+<?php 
+	if(isset($_GET['error']))
+		echo "<p style='background:red;color:yellow'>",$_GET['error'],"</p>";
+?>
 </form>
 </div>
 </body>
