@@ -36,5 +36,7 @@ echo <<<HTML
 	</table>
 HTML;
 		}
+	}else{
+		header("location:index.php?error=INGRESO NO AUTORIZADO POR URL!!!!");
 	}
  ?>
