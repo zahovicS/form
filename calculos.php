@@ -7,5 +7,4 @@
 	}else{
 		header("location:index2.php?error=ingresar un valor");
 	}
-
 ?>
