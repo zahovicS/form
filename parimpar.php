@@ -6,4 +6,9 @@
 		<input type="number" name="numero">
 		<button type="submit">CALCULAR</button>
 	</form>
+	<?php 
+
+		
+
+	?>
 </fieldset>
