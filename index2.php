@@ -12,13 +12,3 @@
 		echo isset($_GET['error'])?$_GET['error']:"";
 	?>
 </fieldset>
-
-
-
-
-<fieldset>
-	<!--Form para saber cuantos digitos tiene una cantidad-->
-	<form>
-		
-	</form>
-</fieldset>
