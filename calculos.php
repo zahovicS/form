@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 	extract($_GET);
 
 	if (isset($cuadrado)and !empty($cuadrado)) {
